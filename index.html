@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>website skeleton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Baloo+2:wght@400..800&family=Calistoga&family=Caveat:wght@400..700&family=Eczar:wght@400..800&family=Glegoo:wght@400;700&family=Hind:wght@300;400;500;600;700&family=Jaini&family=Jaini+Purva&family=Jaldi:wght@400;700&family=Kalam:wght@300;400;700&family=Karla:ital,wght@0,200..800;1,200..800&family=Karma:wght@300;400;500;600;700&family=Khula:wght@300;400;600;700;800&family=Laila:wght@300;400;500;600;700&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Martel:wght@200;300;400;600;700;800;900&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Palanquin:wght@100;200;300;400;500;600;700&family=Playwrite+AR:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sarala:wght@400;700&family=Teko:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0px;
+        box-sizing: border-box;
+        color: var(--main-color);
+        font-family: Arial, Helvetica, sans-serif;
+
+        &::selection {
+          background-color: green;
+          color: rgb(255, 225, 0);
+          text-shadow: 0 1px 4px rgba(0, 0, 0, 0.459);
+        }
+      }
+      body {
+        width: 100%;
+        padding: 10px;
+        background-color: #ccc;
+      }
+      :root {
+        --main-bgc: rgb(255, 255, 255);
+        --main-color: rgb(5, 23, 25);
+        --nav-color: rgb(28, 28, 28);
+        --b-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.228);
+        --white-color: white;
+      }
+      header {
+        background-color: rgb(255, 255, 255);
+        height: 15rem;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: var(--b-shadow);
+        & h1 {
+          font-size: 4rem;
+          margin-top: 0.3rem;
+          font-family: "Poppins", sans-serif;
+        }
+        & p {
+          font-size: 2rem;
+          font-family: "kalam", "Caveat", cursive;
+          margin-top: 0.6rem;
+        }
+      }
+
+      /* =========top nav=========== */
+
+      .top-nav {
+        /* position: sticky;
+        top: 0; */
+        background-color: var(--nav-color);
+        box-shadow: var(--b-shadow);
+        color: var(--white-color);
+        width: 100%;
+        transition: all 0.1s linear;
+
+        & a {
+          font-size: 1.3rem;
+          color: var(--white-color);
+          text-decoration: none;
+          text-transform: capitalize;
+          height: 100%;
+          display: inline-block;
+          padding: 12px 20px;
+          &:nth-child(3) {
+            float: right;
+          }
+          &:hover {
+            background-color: rgb(178, 231, 254);
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        left: 0;
+        color: #f2f2f2;
+        padding: 10px 26px;
+        align-items: center;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #showHide {
+        color: #ccc;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        & h1 {
+          color: white;
+          margin-right: 2rem;
+        }
+        & p {
+          color: wheat;
+          font-family: cursive;
+        }
+      }
+
+      /* =========top nav===========! */
+
+      /* =========main content========== */
+      .main {
+        width: 100%;
+        padding: 0;
+      }
+      .row {
+        width: 100%;
+
+        & .left-side--col {
+          width: 70%;
+          float: left;
+
+          & .container {
+            width: 100%;
+            background-color: var(--main-bgc);
+            margin: 15px 0px;
+            padding: 1.5rem;
+            font-weight: 400;
+
+            & p {
+              padding: 1rem 0;
+            }
+            & div {
+              height: 15rem;
+              background-color: #ccc;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+
+        & .right-side--col {
+          width: 28%;
+          float: right;
+
+          & .container {
+            width: 100%;
+            background-color: var(--main-bgc);
+            margin: 15px 0px;
+            padding: 1.5rem;
+            font-weight: 400;
+
+            & p {
+              padding: 1rem 0;
+            }
+            & div {
+              height: 5rem;
+              background-color: #ccc;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+
+      .row::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      /* =========main content==========! */
+
+      /* ========footer============== */
+      footer {
+        height: 8rem;
+        background-color: var(--main-bgc);
+        text-align: center;
+        padding-top: 4rem;
+      }
+      /* ========footer==============! */
+
+      @media screen and (max-width: 600px) {
+        .top-nav {
+          & #showHide {
+            display: flex;
+            text-align: center;
+            width: 100%;
+            justify-content: center;
+            padding-left: 33%;
+            & p {
+              display: none;
+              margin: 0;
+              padding: 0;
+            }
+            text-align: center;
+          }
+          flex-direction: column;
+          height: 1.8rem;
+          & a {
+            font-size: 1rem;
+            float: none;
+            padding: 4px;
+          }
+        }
+
+        header {
+          height: auto;
+          & h1 {
+            font-size: 3rem;
+          }
+          & p {
+            font-size: 1rem;
+          }
+        }
+        .row .right-side--col {
+          width: 100%;
+          float: none;
+        }
+        .row .left-side--col {
+          width: 100%;
+          float: none;
+        }
+        .sticky {
+          height: 4rem;
+        }
+      }
+      @media screen and (max-width: 1030px) {
+        .top-nav {
+          & #showHide {
+            display: flex;
+            text-align: center;
+            width: 100%;
+            justify-content: space-between;
+            & h1 {
+              margin: 0;
+            }
+          }
+          flex-direction: column;
+          height: 1.8rem;
+          & a {
+            font-size: 1rem;
+            float: none;
+            padding: 4px;
+          }
+        }
+        .sticky {
+          height: 6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>PG W0rld</h1>
+      <p>One of the most popular platform for learning skills.</p>
+    </header>
+
+    <nav class="top-nav" id="myHeader">
+      <div style="display: none" id="showHide" class="show-Hide">
+        <h1>PG W0rld</h1>
+        <p>One of the most popular platform for learning skills.</p>
+      </div>
+      <div class="top-nav2">
+        <a href="#">home</a>
+        <a href="#">about</a>
+        <a href="#">contact</a>
+        <a href="#">services</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="row">
+        <div class="left-side--col">
+          <div class="container">
+            <h1>Title heading</h1>
+            <p>Title description, Dec 7, 2017</p>
+            <div class="fake-img">image</div>
+            <p>Some text...</p>
+            <p>
+              Sunt in sulpa qui officia deserunt mollit anim id est laborum
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. ut enim ad minim veniam, quis
+              nostrud exercitation ullamco.
+            </p>
+          </div>
+          <div class="container">
+            <h1>Title heading</h1>
+            <p>Title description, Dec 7, 2017</p>
+            <div class="fake-img">image</div>
+            <p>Some text...</p>
+            <p>
+              Sunt in sulpa qui officia deserunt mollit anim id est laborum
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. ut enim ad minim veniam, quis
+              nostrud exercitation ullamco.
+            </p>
+          </div>
+        </div>
+
+        <div class="right-side--col">
+          <div class="container">
+            <h1>About Me</h1>
+
+            <div class="fake-img">image</div>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Explicabo, quidem voluptates! Porro non, perferendis saepe
+              voluptatem illum delectus dolorum, mollitia sapiente harum
+              expedita minus! Nulla vel ex quidem quo quod!
+            </p>
+          </div>
+
+          <div class="container">
+            <h1>Popular Post</h1>
+            <p>discription</p>
+            <div class="fake-img">image</div>
+            <div class="fake-img">image</div>
+            <div class="fake-img">image</div>
+            <div class="fake-img">image</div>
+          </div>
+          <div class="container">
+            <h1>Follow me.</h1>
+            <p>some text.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><h2>Footer</h2></footer>
+
+    <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function () {
+        myFunction();
+      };
+      let myBody = document.querySelector("body");
+      // Get the header
+      var header = document.getElementById("myHeader");
+      let showHide = document.getElementById("showHide");
+      // Get the offset position of the navbar
+      var sticky = header.offsetTop;
+      // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+          myBody.classList.add("changeColor");
+          showHide.style.display = "flex";
+        } else {
+          header.classList.remove("sticky");
+          myBody.classList.remove("changeColor");
+          showHide.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
